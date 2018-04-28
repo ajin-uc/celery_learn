@@ -22,3 +22,11 @@ def insertion(name, email):
     time.sleep(2)
     CeleryTest.objects.create(name=name, email=email)
     return "worked"
+
+@app.task
+def get_no_char(string):
+    return len(string)
+
+@app.task
+def reverser(string):
+    return string[::-1]
