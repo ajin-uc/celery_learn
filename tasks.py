@@ -8,3 +8,11 @@ def get_no_char(string):
 @app.task
 def reverser(string):
     return string[::-1]
+
+@app.task
+def add(v1, v2):
+    return v1+v2
+
+@app.task
+def regular():
+    return "WORKING ON DEFAULT QUEUE"
