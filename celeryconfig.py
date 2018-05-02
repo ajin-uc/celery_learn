@@ -1,12 +1,12 @@
-from kombu import Queue, Exchange
+from kombu import Queue
 
 broker_url = 'amqp://localhost//'
 imports = ('tasks',)
-task_queues = (
-    Queue('addition-queue', Exchange('direct'), routing_key='addition-queue'),
-)
 task_default_queue = 'default-queue'
 task_default_exchange_type = 'direct'
+task_queues = (
+    Queue('adition-queue', routing_key='adition-queue'),
+)
 task_routes = [
     'router.tasks_router',
     {
