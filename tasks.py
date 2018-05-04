@@ -16,3 +16,7 @@ def add(v1, v2):
 @app.task
 def regular():
     return "WORKING ON DEFAULT QUEUE"
+
+@app.task
+def periodic_task_test(arg):
+    print("recieved arg: {}".format(arg))
