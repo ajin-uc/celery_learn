@@ -9,7 +9,8 @@ task_default_exchange_type = 'direct'
 
 task_queues = (
     Queue('adition-queue', routing_key='adition-queue'),
-    Queue('periodic-queue', routing_key='periodic-queue')
+    Queue('periodic-queue', routing_key='periodic-queue'),
+    Queue('testing-queue', routing_key='testing-queue'),
 )
 
 task_create_missing_queues = False
