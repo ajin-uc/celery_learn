@@ -20,3 +20,7 @@ def regular():
 @app.task
 def periodic_task_test(arg):
     print("recieved arg: {}".format(arg))
+
+@app.task
+def test_task(input):
+    return input

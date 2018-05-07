@@ -12,6 +12,8 @@ task_queues = (
     Queue('periodic-queue', routing_key='periodic-queue')
 )
 
+task_create_missing_queues = False
+
 task_routes = [
     'router.tasks_router',
     {
