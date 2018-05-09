@@ -9,7 +9,7 @@ def get_no_char(string):
 def reverser(string):
     return string[::-1]
 
-@app.task
+@app.task(autoretry_for=(Exception,), default_retry_delay=3)
 def add(v1, v2):
     return v1+v2
 
